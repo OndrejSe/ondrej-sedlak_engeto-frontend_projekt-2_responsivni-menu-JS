@@ -1,0 +1,496 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+    overflow: hidden;
+}
+
+:root {
+    ---transparent-white: rgba(249, 244, 244, 0.9);
+    ---transparent-dark-grey: rgba(50, 50, 50, 0.9);
+    ---white-solid: #f9f4f4;
+    ---dark-grey-solid: #404040;
+}
+
+
+/* HEADER - Responzivní menu*/
+
+header {
+    background-color: var(---transparent-white);
+    height: 80px;
+    border-radius: 40px;
+    position: absolute;
+    width: calc(100% - 40px);
+    margin: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo {
+    flex-grow: 1;
+}
+
+.logo img {
+    width: 200px;
+    margin-left: 32px;
+}
+
+nav {
+    margin-right: 32px;
+    transform: translateY(0px);
+}
+
+nav ul {
+    display: flex;
+    gap: 32px;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+nav li a {
+    text-decoration: none;
+    color: var(---dark-grey-solid);
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.first-menu-item {
+    transform: translateX(0px);
+}
+
+.second-menu-item {
+    transform: translateX(0px);
+    
+}
+
+.third-menu-item {
+    transform: translateX(0px);
+}
+
+.menu-icon {
+    margin-right: 32px;
+    display: none;
+}
+
+/* SEKCE 1 - Domovská stránka */
+
+.home {
+    background: url("images/svihal_home.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    padding: 20px 20px 48px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: end;
+}
+
+.home p {
+    font-size: 16px;
+}
+
+.first-home-text {
+    background-color: var(---transparent-dark-grey);
+    color: var(---white-solid);
+    line-height: 1.2;
+    padding: 20px;
+    margin: 0 150px 30px 0;
+    border-radius: 20px;
+    width: 420px;
+    display: none;
+}
+
+.second-home-text {
+    background-color: var(---transparent-dark-grey);
+    color: var(---white-solid);
+    line-height: 1.2;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    width: 420px;
+    display: none;
+}
+
+.third-home-text {
+    background-color: var(---transparent-dark-grey);
+    color: var(---white-solid);
+    line-height: 1.2;
+    padding: 20px;
+    margin: 0 0 30px 155px;
+    border-radius: 20px;
+    width: 420px;
+    display: none;
+}
+
+.circles {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 0;
+    width: 560px;
+}
+
+.home-circle {
+    background-color: var(---transparent-white);
+    width: 160px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: 0.5s ease;
+}
+
+.home-circle p {
+    color: var(---dark-grey-solid);
+    font-weight: bold;
+    text-align: center;
+    font-size: 16px;
+    line-height: 28px;
+    text-transform: uppercase;
+}
+
+
+/* SEKCE 2 - O mně */
+
+.about-me {
+    background: url("images/svihal_about.jpg");
+    background-size: cover;
+    background-position-x: right;
+    background-position-y: top;
+    height: 100vh;
+    padding: 20px;
+    display: none;
+    justify-content: center;
+    align-items: end;
+    flex-direction: row-reverse;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.about-content {
+    position: relative;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    transform: translateY(calc(100% - 68px)) ;
+    transition: 0.5s ease;
+}
+
+.about-heading {
+    color: var(---dark-grey-solid);
+    background-color: var(---transparent-white);
+    padding: 10px 10px;
+    border-radius: 42px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 260px;
+}
+
+.about-heading h1 {
+    font-size: 32px;
+    margin-left: 10px;
+}
+
+.about-arrow-button {
+    background-color: var(---transparent-dark-grey);
+    color: var(---white-solid);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    font-size: 24px;
+    text-align: center;
+    line-height: 48px;
+    transition: 0.5s ease;
+}
+
+.about-text {
+    background-color: var(---transparent-white);
+    padding: 20px;
+    border-radius: 30px;
+    width: 100%;
+    transition: 0.5s ease;
+}
+
+.about-text p {
+    font-size: 16px;
+    line-height: 1.25;
+    text-align: justify;
+}
+
+/* SEKCE 3 - Kontakt */
+
+.contact {
+    background: url("images/svihal_contact.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    align-items: end;
+    justify-content: end;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.contact-box {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.contact-box .fa-solid{
+    background-color: var(---transparent-dark-grey);
+    color: var(---white-solid);
+    width: 36px;
+    height: 36px;
+    font-size: 16px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 36px;
+}
+
+.contact-type {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.contact-caption {
+    background-color: var(---transparent-white);
+    color: var(---dark-grey-solid);
+    padding: 4px;
+    border-radius: 22px;
+    width: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.contact h2 {
+    font-size: 20px;
+}
+
+.contact p {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    text-align: center;
+    background-color: var(---transparent-dark-grey);
+    color: var(---white-solid);
+    padding: 10px 20px;
+    border-radius: 24px;
+    width: 256px;
+}
+
+.contact-icon-mobile {
+    display: none;
+}
+
+.hours {
+    transform: translateX(278px);
+    transition: 0.5s ease;
+}
+
+
+.adress {
+    transform: translateX(278px);
+    transition: 0.5s ease;
+}
+
+
+.phone {
+    transform: translateX(278px);
+    transition: 0.5s ease;
+}
+
+.email {
+    transform: translateX(278px);
+    transition: 0.5s ease;
+}
+
+@media (max-width: 600px) {
+
+    /* HEADER */
+
+    header {
+        position: absolute;
+    }
+
+    nav {
+        position: absolute;
+        width: 100%;
+        margin-top: 16.5rem;
+        display: flex;
+        justify-content: end;
+        transform: translateY(-10px);
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    nav li {
+        background-color: var(---transparent-white);
+        padding: 12px 1.5rem;
+        border-radius: 2rem;
+        text-align: center;
+    }
+
+    nav li a {
+        font-size: 14px;
+    }
+
+    .menu-icon {
+        display: block;
+        color: var(---dark-grey-solid);
+        font-size: 2rem;
+    }
+
+    .first-menu-item {
+        transform: translateX(150px);
+    }
+
+    .second-menu-item {
+        transform: translateX(150px);
+        
+    }
+
+    .third-menu-item {
+        transform: translateX(150px);
+    }
+
+    /* SEKCE 1 - Domovská stránka */
+
+    .home p {
+        font-size: 14px;
+    }
+
+    .circles-container {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .circles {
+        max-width: 360px;
+            }
+
+    .home-circle {
+        width: 100px;
+        height: 100px;
+    }
+
+    .home-circle p {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    
+    .first-home-text, .second-home-text, .third-home-text {
+        width: 100%;
+        margin: 0 0 30px 0;
+    }
+
+    /* SEKCE 2 - O mně*/
+
+    .about-me {
+        background-position-x: -80vh;
+    }
+
+    .about-heading {
+        transform:  scale(0.75) translateY(17px);
+    }
+
+    .about-text p {
+        font-size: 12px;
+    }
+
+    /*SEKCE 3 - Kontakt*/
+
+    .contact-box {
+        gap: 8px;
+    }
+
+    .contact-type {
+        flex-direction: column;
+        align-items: start;
+        justify-content: start;
+        gap: 8px;
+        transition: 0.5s ease;
+        overflow: hidden;
+    }
+
+    .contact-caption {
+        padding-right: 4px;
+        width: 208px;
+    }
+
+    .contact h2 {
+        display: block;
+        font-size: 16px;
+    }
+
+    .contact-icon-desktop {
+        display: none;
+    }
+
+    .contact-icon-mobile {
+        display: block;
+    }
+
+    .contact p {
+        font-size: 14px;
+        width: 208px;
+        padding: 4px;
+    }
+
+    .contact-box .fa-solid{
+        font-size: 12px;
+        line-height: 24px;
+        width: 24px;
+        height: 24px;
+    }
+
+    .adress {
+        transform: translateX(0);
+        transition: 0.5s ease;
+        height: 32px;
+    }
+    
+    .hours {
+        transform: translateX(0);
+        transition: 0.5s ease;
+        height: 32px;
+    }
+    
+    .phone {
+        transform: translateX(0);
+        transition: 0.5s ease;
+        height: 32px;
+    }
+    
+    .email {
+        transform: translateX(0);
+        height: 32px;
+    }
+    }
